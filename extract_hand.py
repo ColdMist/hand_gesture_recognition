@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 from PIL import Image
 import glob
-
+#this is a code
 #Detect the skin area from an image
 def detect_skin(frame,lower,upper):
     frame = imutils.resize(frame, width=400)
