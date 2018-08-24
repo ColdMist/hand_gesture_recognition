@@ -1,1 +1,1 @@
-# hand_gesture_recognition
+# Hand_Gesture Recognition
