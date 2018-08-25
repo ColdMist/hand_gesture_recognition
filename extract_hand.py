@@ -63,7 +63,11 @@ def find_biggest_contours(image):
 lower = np.array([0, 48 , 80], dtype = "uint8")
 upper = np.array([20, 255, 255], dtype = "uint8")
 image_list = []
-for filename in glob.glob('/home/turzo/PycharmProjects/Image_processing_project_1/dataset/Dataset/user_3/*.jpg'):
+folder_list = []
+all_alphabets = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+
+
+for filename in glob.glob('input/A/*.jpg'):
     im = Image.open(filename)
     image_list.append(im)
 
@@ -74,11 +78,13 @@ for i in range(len(image_list)):
     c = find_biggest_contours(skin)
     x, y, width, height = cv2.boundingRect(c)
     only_hand = skin[y:y + height, x:x + width]
-    cv2.imshow("images", np.hstack([resized_frame, skin]))
-    cv2.imshow("extracted", only_hand)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-
+    #cv2.imshow("images", np.hstack([resized_frame, skin]))
+    #cv2.imshow("extracted", only_hand)
+    #cv2.waitKey(0)
+    #cv2.destroyAllWindows()
+    path = 'processed_output/A/' +str(i) + '.jpg'
+    cv2.imwrite(path, only_hand)
+'''
 frame = cv2.imread('/home/turzo/PycharmProjects/Image_processing_project_1/dataset/Dataset/user_3/A0.jpg')
 lower = np.array([0, 48 , 80], dtype = "uint8")
 upper = np.array([20, 255, 255], dtype = "uint8")
@@ -91,3 +97,4 @@ cv2.imshow("images", np.hstack([resized_frame, skin]))
 cv2.imshow("extracted",only_hand)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+'''
