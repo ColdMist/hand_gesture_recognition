@@ -4,5 +4,5 @@ URL: https://www.spiedigitallibrary.org/conference-proceedings-of-spie/11041/110
 
 Dataset retrieved from: https://github.com/mon95/Sign-Language-and-Static-gesture-recognition-using-sklearn
 
-#Citation:
+# Citation:
 Rony, M. R. A. H., & Alam, M. M. (2019, March). Hand gesture recognition using image segmentation and deep neural network. In Eleventh International Conference on Machine Vision (ICMV 2018) (Vol. 11041, pp. 290-295). SPIE.
